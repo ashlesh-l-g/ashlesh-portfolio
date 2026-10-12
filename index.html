@@ -3,169 +3,891 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashlesh L.G – Backend Developer & Systems Learner</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="color-scheme" content="light" />
+  <title>Ashlesh L.G. — Backend Engineering &amp; Systems Programming</title>
+  <meta name="description" content="Personal engineering notebook and portfolio of Ashlesh L.G. Exploring backend architectures, Unix process supervision, systems programming, and infrastructure." />
+  
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Ashlesh L.G. — Backend Engineering &amp; Systems Programming" />
+  <meta property="og:description" content="Personal engineering notebook and portfolio of Ashlesh L.G. Exploring backend architectures, Unix process supervision, and systems programming." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ashlesh-portfolio.vercel.app/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=2.2" />
 </head>
+<body>
 
-<body class="bg-gray-50 text-gray-900">
+  <!-- =========================================
+       1. HEADER / NAVIGATION
+       ========================================= -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="brand">
+        <a href="#" class="brand-name">ASHLESH L.G.</a>
+        <span class="brand-descriptor">/ BACKEND &amp; SYSTEMS</span>
+      </div>
 
-  <!-- NAVBAR -->
-  <nav class="p-5 bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between">
-      <h1 class="text-xl font-bold">Ashlesh L.G</h1>
-      <div class="space-x-6">
-        <a href="#skills" class="hover:text-blue-600">Skills</a>
-        <a href="#projects" class="hover:text-blue-600">Projects</a>
-        <a href="#experience" class="hover:text-blue-600">Experience</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+        <span>MENU</span>
+      </button>
+
+      <nav id="nav-links" class="nav-links" aria-label="Primary Navigation">
+        <a href="#work">WORK</a>
+        <a href="#notes">NOTES</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+
+    <!-- =========================================
+         2. HERO
+         ========================================= -->
+    <section class="site-section hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column -->
+          <div class="hero-copy-col">
+            <span class="hero-eyebrow">BACKEND ENGINEERING / SYSTEMS PROGRAMMING</span>
+            <h1 id="hero-title" class="hero-headline">
+              I like understanding<br />
+              what happens underneath.
+            </h1>
+            <p class="hero-body">
+              I build backend systems and explore the machinery beneath them —
+              from databases and caching to processes, networking, and the
+              Linux environment software runs in.
+            </p>
+            <div class="hero-actions">
+              <a href="#work" class="link-primary">EXPLORE MY WORK &rarr;</a>
+              <a href="https://github.com/ashlesh-l-g" class="link-secondary" target="_blank" rel="noopener noreferrer">GITHUB &nearr;</a>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="hero-schematic-col">
+            <div class="hero-schematic-panel" role="region" aria-label="Systems Relationship Diagram">
+              <div class="schematic-panel-header">
+                <span class="schematic-caption">FIG 0.1 &mdash; CORE SYSTEMS PRIMITIVES</span>
+                <span class="schematic-id">SYS/SPEC</span>
+              </div>
+
+              <!-- Systems Schematic SVG: PROCESS, NETWORK, DATA -->
+              <div class="hero-svg-wrap">
+                <svg viewBox="0 0 360 220" width="360" height="220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing Process, Network, and Data connected through system interfaces">
+                  <!-- Registration Crosshairs and Construction Grid -->
+                  <path d="M 16 20 L 24 20 M 20 16 L 20 24" stroke="#C9C2B7" stroke-width="1" />
+                  <path d="M 336 20 L 344 20 M 340 16 L 340 24" stroke="#C9C2B7" stroke-width="1" />
+                  <path d="M 16 200 L 24 200 M 20 196 L 20 204" stroke="#C9C2B7" stroke-width="1" />
+                  <path d="M 336 200 L 344 200 M 340 196 L 340 204" stroke="#C9C2B7" stroke-width="1" />
+                  
+                  <line x1="24" y1="20" x2="336" y2="20" stroke="#C9C2B7" stroke-width="0.75" stroke-dasharray="2 3" />
+                  <line x1="24" y1="200" x2="336" y2="200" stroke="#C9C2B7" stroke-width="0.75" stroke-dasharray="2 3" />
+
+                  <!-- Interconnection Bus Lines -->
+                  <line x1="75" y1="72" x2="285" y2="72" stroke="#24231F" stroke-width="1.5" />
+                  <line x1="75" y1="72" x2="180" y2="168" stroke="#24231F" stroke-width="1.5" />
+                  <line x1="285" y1="72" x2="180" y2="168" stroke="#24231F" stroke-width="1.5" />
+
+                  <!-- Bus Annotations -->
+                  <text x="180" y="65" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" font-weight="500" fill="#716D64" letter-spacing="0.08em">IPC / POSIX SIGNALS</text>
+                  <text x="114" y="128" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6.5" font-weight="500" fill="#716D64" letter-spacing="0.06em" transform="rotate(42 114 128)">STATE PIPELINE</text>
+                  <text x="246" y="128" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6.5" font-weight="500" fill="#716D64" letter-spacing="0.06em" transform="rotate(-42 246 128)">SOCKET I/O STREAM</text>
+
+                  <!-- Vermilion Vertex Markers -->
+                  <circle cx="180" cy="72" r="2.5" fill="#C4432D" />
+                  <circle cx="127" cy="120" r="2.5" fill="#C4432D" />
+                  <circle cx="233" cy="120" r="2.5" fill="#C4432D" />
+
+                  <!-- Node 1: PROCESS -->
+                  <g transform="translate(75, 72)">
+                    <rect x="-50" y="-36" width="100" height="26" fill="#F4F1EA" stroke="#24231F" stroke-width="1.2" />
+                    <text x="0" y="-19" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10.5" font-weight="600" fill="#24231F" letter-spacing="1">PROCESS</text>
+                    <text x="0" y="22" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7.5" font-weight="500" fill="#716D64" letter-spacing="0.06em">01 / EXECUTION</text>
+                    <circle cx="0" cy="0" r="5" fill="#F4F1EA" stroke="#24231F" stroke-width="1.5" />
+                    <circle cx="0" cy="0" r="2" fill="#C4432D" />
+                  </g>
+
+                  <!-- Node 2: NETWORK -->
+                  <g transform="translate(285, 72)">
+                    <rect x="-50" y="-36" width="100" height="26" fill="#F4F1EA" stroke="#24231F" stroke-width="1.2" />
+                    <text x="0" y="-19" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10.5" font-weight="600" fill="#24231F" letter-spacing="1">NETWORK</text>
+                    <text x="0" y="22" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7.5" font-weight="500" fill="#716D64" letter-spacing="0.06em">02 / TRANSPORT</text>
+                    <circle cx="0" cy="0" r="5" fill="#F4F1EA" stroke="#24231F" stroke-width="1.5" />
+                    <circle cx="0" cy="0" r="2" fill="#C4432D" />
+                  </g>
+
+                  <!-- Node 3: DATA -->
+                  <g transform="translate(180, 168)">
+                    <rect x="-50" y="12" width="100" height="26" fill="#F4F1EA" stroke="#24231F" stroke-width="1.2" />
+                    <text x="0" y="29" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10.5" font-weight="600" fill="#24231F" letter-spacing="1">DATA</text>
+                    <text x="0" y="-12" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7.5" font-weight="500" fill="#716D64" letter-spacing="0.06em">03 / PERSISTENCE</text>
+                    <circle cx="0" cy="0" r="5" fill="#F4F1EA" stroke="#24231F" stroke-width="1.5" />
+                    <circle cx="0" cy="0" r="2" fill="#C4432D" />
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Technical Annotations & Interests -->
+              <div class="interests-panel">
+                <span class="interests-label">CURRENT INVESTIGATIONS (DIRECTIONS)</span>
+                <ul class="interests-list" aria-label="Current interests list">
+                  <li class="interest-tag">GO</li>
+                  <li class="interest-tag">LINUX</li>
+                  <li class="interest-tag">CONCURRENCY</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Folio Divider Transition -->
+    <div class="editorial-folio-divider" role="separator" aria-label="Project Archive Folio Index">
+      <div class="container folio-content">
+        <span class="folio-tag"><span class="folio-index">CATALOG: 01 &mdash; 04</span> &bull; SELECTED SYSTEMS &amp; APPLICATION ARCHITECTURES</span>
+        <span class="folio-center">ENGINEERING DOSSIER &bull; ARCHIVE 2024&ndash;2026</span>
+        <span class="folio-meta">SECTION: /PROJECTS</span>
       </div>
     </div>
-  </nav>
 
-  <!-- HERO -->
-  <section class="max-w-6xl mx-auto text-center py-24">
-    <h2 class="text-4xl font-extrabold">Backend Developer & Systems Programming Learner</h2>
-    <p class="mt-5 text-lg max-w-2xl mx-auto">
-      I specialize in building robust backends, real-time systems, distributed components, 
-      and low-level systems like WSGI servers, orchestrators, and fuzzy-logic simulations.  
-      My learning approach is deep, structured, and engineering-focused.
-    </p>
-    <div class="mt-8 space-x-4">
-      <a href="#projects"
-        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">View My Work</a>
-      <a href="#contact"
-        class="px-6 py-3 border border-gray-600 rounded-lg hover:bg-gray-100">Contact</a>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="bg-white py-20">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10">Skills & Technologies</h3>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-        <div class="p-4 bg-gray-100 rounded-lg shadow">
-          <h4 class="font-bold">Backend Development</h4>
-          <p class="text-sm mt-2">Node.js, Express, FastAPI, Prisma, PostgreSQL, Redis</p>
-        </div>
-
-        <div class="p-4 bg-gray-100 rounded-lg shadow">
-          <h4 class="font-bold">Systems Programming</h4>
-          <p class="text-sm mt-2">C (process mgmt, IPC), WSGI servers, orchestrators</p>
-        </div>
-
-        <div class="p-4 bg-gray-100 rounded-lg shadow">
-          <h4 class="font-bold">Real-time Systems</h4>
-          <p class="text-sm mt-2">WebSockets, Socket.io, Queue & appointment systems</p>
-        </div>
-
-        <div class="p-4 bg-gray-100 rounded-lg shadow">
-          <h4 class="font-bold">AI & Fuzzy Systems</h4>
-          <p class="text-sm mt-2">Mamdani FIS, simulation engines, Python automation</p>
-        </div>
-
-        <div class="p-4 bg-gray-100 rounded-lg shadow">
-          <h4 class="font-bold">Dev Tools</h4>
-          <p class="text-sm mt-2">GitHub, Vercel, Docker basics, API testing</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="py-20">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10">Highlighted Projects</h3>
-
-      <div class="space-y-10">
-
-        <!-- Project 1 -->
-        <div class="bg-white shadow p-6 rounded-lg">
-          <h4 class="text-xl font-bold">Dockman – Mini Container Orchestrator (C)</h4>
-          <p class="mt-3 text-gray-700">
-            A CLI orchestrator inspired by Docker & Gunicorn, built to learn Unix process management, 
-            fork/exec, signals, IPC, and workload orchestration.  
-            Includes YAML config parsing and process supervision.
+    <!-- =========================================
+         3. SELECTED ENGINEERING PROJECTS
+         ========================================= -->
+    <section id="work" class="site-section projects-section" aria-labelledby="work-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">01 / SELECTED WORK</span>
+          <h2 id="work-title" class="section-title">Things I&rsquo;ve built.</h2>
+          <p class="section-intro">
+            A selection of projects exploring backend architecture,
+            real-time communication, and systems-level programming.
           </p>
         </div>
 
-        <!-- Project 2 -->
-        <div class="bg-white shadow p-6 rounded-lg">
-          <h4 class="text-xl font-bold">Real-time Clinic Queue & Appointment System</h4>
-          <p class="mt-3 text-gray-700">
-            Built using FastAPI, Redis, PostgreSQL, and WebSockets.  
-            Includes predictive wait times, real-time patient updates, 
-            and a modular backend architecture.
+        <div class="projects-list">
+
+          <!-- =========================================================
+               PROJECT 01: TASK MANAGEMENT SERVICE (Primary Footprint)
+               ========================================================= -->
+          <article class="project-row featured-primary" aria-labelledby="p1-title">
+            <div class="project-featured-grid">
+              
+              <!-- Left: Description and Details -->
+              <div class="project-info-col">
+                <div class="project-header-meta">
+                  <span class="project-number">01</span>
+                  <span class="project-category">BACKEND SYSTEMS</span>
+                </div>
+
+                <h3 id="p1-title" class="project-title">Task Management Service</h3>
+
+                <p class="project-description">
+                  A task management application built around explicit business rules
+                  and a layered backend architecture.
+                </p>
+
+                <ul class="project-spec-list" aria-label="Domain Invariants and Business Rules">
+                  <li class="project-spec-item">
+                    <span class="project-spec-key">LIFECYCLE FSM</span>
+                    Strict unidirectional state transitions: <code>TODO &rarr; IN_PROGRESS &rarr; DONE</code>. Illegal transitions are rejected at the service layer.
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-key">MODIFICATION LOCK</span>
+                    Tasks in <code>DONE</code> state are immutably locked against payload mutations and status regressions.
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-key">SOFT DELETION</span>
+                    Records are tombstoned via timestamp flagging; active queries exclude deleted rows while preserving audit trail integrity.
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-key">CACHE STRATEGY</span>
+                    Read-aside Redis cache with TTL and key-based cache invalidation on any write or status change.
+                  </li>
+                </ul>
+
+                <ul class="tech-tags" aria-label="Technologies used">
+                  <li class="tech-tag">Node.js</li>
+                  <li class="tech-tag">TypeScript</li>
+                  <li class="tech-tag">Express</li>
+                  <li class="tech-tag">PostgreSQL</li>
+                  <li class="tech-tag">Prisma</li>
+                  <li class="tech-tag">Redis</li>
+                  <li class="tech-tag">JWT</li>
+                  <li class="tech-tag">Docker</li>
+                </ul>
+
+                <div>
+                  <a href="https://github.com/ashlesh-l-g/task-management-service" class="project-link" target="_blank" rel="noopener noreferrer">
+                    VIEW REPOSITORY &nearr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right: Layered Architecture Schematic -->
+              <div class="project-schematic-col">
+                <div class="project-plate-dark">
+                  <div class="schematic-meta">
+                    <span>SCHEMATIC 1.1</span>
+                    <span>LAYERED REQUEST FLOW &amp; CACHE</span>
+                  </div>
+
+                  <div class="schematic-content">
+                    <svg viewBox="0 0 380 340" width="380" height="340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Layered backend architecture schematic showing Route, Controller, Service, Repository, Database and connected Cache">
+                      <!-- Vertical Request Pipeline -->
+                      <!-- 1. ROUTE -->
+                      <g transform="translate(60, 20)">
+                        <rect x="0" y="0" width="150" height="36" fill="#2D2C27" stroke="#3D3B35" stroke-width="1.2" />
+                        <text x="75" y="23" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#F4F1EA" letter-spacing="1">ROUTE</text>
+                      </g>
+
+                      <!-- Arrow 1 -->
+                      <line x1="135" y1="56" x2="135" y2="78" stroke="#C9C2B7" stroke-width="1.2" />
+                      <polygon points="135,82 131,74 139,74" fill="#C9C2B7" />
+
+                      <!-- 2. CONTROLLER -->
+                      <g transform="translate(60, 82)">
+                        <rect x="0" y="0" width="150" height="36" fill="#2D2C27" stroke="#3D3B35" stroke-width="1.2" />
+                        <text x="75" y="23" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#F4F1EA" letter-spacing="1">CONTROLLER</text>
+                      </g>
+
+                      <!-- Arrow 2 -->
+                      <line x1="135" y1="118" x2="135" y2="140" stroke="#C9C2B7" stroke-width="1.2" />
+                      <polygon points="135,144 131,136 139,136" fill="#C9C2B7" />
+
+                      <!-- 3. SERVICE -->
+                      <g transform="translate(60, 144)">
+                        <rect x="0" y="0" width="150" height="36" fill="#2D2C27" stroke="#3D3B35" stroke-width="1.2" />
+                        <text x="75" y="23" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#F4F1EA" letter-spacing="1">SERVICE</text>
+                      </g>
+
+                      <!-- Cache Branch from Service -->
+                      <line x1="210" y1="162" x2="265" y2="162" stroke="#C4432D" stroke-width="1.2" stroke-dasharray="3 3" />
+                      <polygon points="268,162 260,158 260,166" fill="#C4432D" />
+
+                      <!-- CACHE Component -->
+                      <g transform="translate(270, 144)">
+                        <rect x="0" y="0" width="90" height="36" fill="#2D2C27" stroke="#C4432D" stroke-width="1.2" />
+                        <text x="45" y="22" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9.5" font-weight="600" fill="#C4432D" letter-spacing="1">CACHE</text>
+                        <text x="45" y="32" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6.5" fill="#A8A49C">REDIS</text>
+                      </g>
+
+                      <!-- Arrow 3 -->
+                      <line x1="135" y1="180" x2="135" y2="202" stroke="#C9C2B7" stroke-width="1.2" />
+                      <polygon points="135,206 131,198 139,198" fill="#C9C2B7" />
+
+                      <!-- 4. REPOSITORY -->
+                      <g transform="translate(60, 206)">
+                        <rect x="0" y="0" width="150" height="36" fill="#2D2C27" stroke="#3D3B35" stroke-width="1.2" />
+                        <text x="75" y="23" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#F4F1EA" letter-spacing="1">REPOSITORY</text>
+                      </g>
+
+                      <!-- Arrow 4 -->
+                      <line x1="135" y1="242" x2="135" y2="264" stroke="#C9C2B7" stroke-width="1.2" />
+                      <polygon points="135,268 131,260 139,260" fill="#C9C2B7" />
+
+                      <!-- 5. DATABASE -->
+                      <g transform="translate(60, 268)">
+                        <rect x="0" y="0" width="150" height="40" fill="#2D2C27" stroke="#3D3B35" stroke-width="1.2" />
+                        <text x="75" y="22" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#F4F1EA" letter-spacing="1">DATABASE</text>
+                        <text x="75" y="33" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#A8A49C">POSTGRESQL / PRISMA</text>
+                      </g>
+
+                      <!-- Annotation indicator -->
+                      <circle cx="210" cy="162" r="2.5" fill="#C4432D" />
+                      <text x="238" y="153" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#A8A49C">LOOKUP</text>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- =========================================================
+               PROJECT 02: DOCKERMAN (Systems Programming)
+               ========================================================= -->
+          <article class="project-row" aria-labelledby="p2-title">
+            <div class="project-grid-two-col project-grid-reversed">
+              
+              <!-- Left: Description and Technical Context (Right on Desktop) -->
+              <div class="project-info-col">
+                <div class="project-header-meta">
+                  <span class="project-number">02</span>
+                  <span class="project-category">SYSTEMS PROGRAMMING</span>
+                </div>
+
+                <h3 id="p2-title" class="project-title-secondary">Dockerman</h3>
+
+                <p class="project-description">
+                  A Docker-inspired project written in C to explore Unix process
+                  management and the mechanics behind supervising workloads.
+                </p>
+
+                <ul class="project-spec-list" aria-label="Systems Programming Primitives">
+                  <li class="project-spec-item">
+                    <span class="project-spec-key">PROCESS SPAWNING</span>
+                    Clones execution contexts using POSIX <code>fork()</code>, decoupling child execution from the parent supervisor.
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-key">IMAGE EXECUTION</span>
+                    Invokes <code>execvp()</code> with file descriptor redirection of standard streams to per-service log sinks.
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-key">LIVENESS PROBING</span>
+                    Non-destructive heartbeat validation via zero-signal <code>kill(pid, 0)</code> checks and PID registry tracking.
+                  </li>
+                  <li class="project-spec-item">
+                    <span class="project-spec-key">GRACEFUL TEARDOWN</span>
+                    Dispatches <code>SIGTERM</code> with timeout-based fallback to <code>SIGKILL</code> to guarantee process cleanup.
+                  </li>
+                </ul>
+
+                <ul class="tech-tags" aria-label="Technologies used">
+                  <li class="tech-tag">C</li>
+                  <li class="tech-tag">POSIX System Calls</li>
+                  <li class="tech-tag">fork / exec</li>
+                  <li class="tech-tag">Signals &amp; SIGTERM</li>
+                  <li class="tech-tag">PID Management</li>
+                  <li class="tech-tag">Linux / Unix</li>
+                </ul>
+
+                <div>
+                  <a href="https://github.com/ashlesh-l-g/dockerman" class="project-link" target="_blank" rel="noopener noreferrer">
+                    VIEW REPOSITORY &nearr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right: Conceptual Process Supervision Schematic -->
+              <div class="project-schematic-col">
+                <div class="project-plate-dark">
+                  <div class="schematic-meta">
+                    <span>SCHEMATIC 2.1</span>
+                    <span>PROCESS SUPERVISION MODEL</span>
+                  </div>
+
+                  <div class="schematic-content">
+                    <svg viewBox="0 0 360 210" width="360" height="210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conceptual process supervision schematic: supervisor parent process dispatching fork and signals to supervised child processes">
+                      <!-- Supervisor Parent Process Box -->
+                      <g transform="translate(95, 18)">
+                        <rect x="0" y="0" width="170" height="44" fill="#2D2C27" stroke="#3D3B35" stroke-width="1.2" />
+                        <text x="85" y="22" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9.5" font-weight="600" fill="#F4F1EA" letter-spacing="1">PARENT SUPERVISOR</text>
+                        <text x="85" y="35" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#A8A49C">dockman CLI &bull; PID: MAIN</text>
+                        <!-- Status dot -->
+                        <circle cx="16" cy="22" r="3" fill="#C4432D" />
+                      </g>
+
+                      <!-- Supervisory Branches -->
+                      <!-- Left branch: Worker -->
+                      <path d="M 135 62 L 135 90 L 75 90 L 75 120" fill="none" stroke="#C9C2B7" stroke-width="1.2" />
+                      <polygon points="75,124 71,116 79,116" fill="#C9C2B7" />
+
+                      <!-- Right branch: Web -->
+                      <path d="M 225 62 L 225 90 L 285 90 L 285 120" fill="none" stroke="#C9C2B7" stroke-width="1.2" />
+                      <polygon points="285,124 281,116 289,116" fill="#C9C2B7" />
+
+                      <!-- Signal annotations -->
+                      <text x="68" y="104" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6.5" fill="#C4432D">fork() &bull; SIGTERM</text>
+                      <text x="292" y="104" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6.5" fill="#C4432D">fork() &bull; SIGTERM</text>
+
+                      <!-- Probing return arrow from Worker (kill 0) -->
+                      <path d="M 95 126 L 95 106 L 120 106 L 120 66" fill="none" stroke="#716D64" stroke-width="0.75" stroke-dasharray="2 2" />
+                      <polygon points="120,63 117,69 123,69" fill="#716D64" />
+                      <text x="107" y="113" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="5.5" fill="#A8A49C">kill(pid, 0)</text>
+
+                      <!-- Child Process 1: Worker -->
+                      <g transform="translate(15, 126)">
+                        <rect x="0" y="0" width="125" height="46" fill="#2D2C27" stroke="#3D3B35" stroke-width="1.2" />
+                        <text x="62.5" y="22" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="600" fill="#F4F1EA" letter-spacing="0.5">CHILD: WORKER</text>
+                        <text x="62.5" y="35" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6.5" fill="#A8A49C">PID File &bull; stdout log</text>
+                      </g>
+
+                      <!-- Child Process 2: Web -->
+                      <g transform="translate(220, 126)">
+                        <rect x="0" y="0" width="125" height="46" fill="#2D2C27" stroke="#3D3B35" stroke-width="1.2" />
+                        <text x="62.5" y="22" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="600" fill="#F4F1EA" letter-spacing="0.5">CHILD: WEB SERVICE</text>
+                        <text x="62.5" y="35" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6.5" fill="#A8A49C">PID File &bull; stdout log</text>
+                      </g>
+
+                      <!-- Bottom Invariant Caption -->
+                      <text x="180" y="196" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#A8A49C" letter-spacing="0.06em">PROCESS LIFECYCLE &amp; DESCRIPTOR ISOLATION</text>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- =========================================================
+               PROJECT 03: REAL-TIME CHAT (Real-Time Systems)
+               ========================================================= -->
+          <article class="project-row" aria-labelledby="p3-title">
+            <div class="project-grid-two-col">
+              
+              <!-- Left: Description and Technical Context -->
+              <div class="project-info-col">
+                <div class="project-header-meta">
+                  <span class="project-number">03</span>
+                  <span class="project-category">REAL-TIME SYSTEMS</span>
+                </div>
+
+                <h3 id="p3-title" class="project-title-secondary">Real-Time Chat</h3>
+
+                <p class="project-description">
+                  An exploration of event-driven communication and bi-directional
+                  message exchange across connected network clients.
+                </p>
+
+                <p class="project-details-text">
+                  Investigates persistent transport channels, WebSocket connection
+                  establishment, event-driven message dispatch, and interaction
+                  between concurrent clients communicating through an intermediary
+                  server layer.
+                </p>
+
+                <ul class="tech-tags" aria-label="Technologies used">
+                  <li class="tech-tag">WebSockets</li>
+                  <li class="tech-tag">Event-Driven I/O</li>
+                  <li class="tech-tag">Full-Duplex Streams</li>
+                  <li class="tech-tag">Node.js</li>
+                </ul>
+
+                <div>
+                  <span class="toolkit-note">REPOSITORY UNPUBLISHED / IN EXPLORATION</span>
+                </div>
+              </div>
+
+              <!-- Right: Restrained Communication Schematic -->
+              <div class="project-schematic-col">
+                <div class="project-plate-light">
+                  <div class="schematic-meta">
+                    <span>SCHEMATIC 3.1</span>
+                    <span>DUPLEX COMMUNICATION TOPOLOGY</span>
+                  </div>
+
+                  <div class="schematic-content">
+                    <svg viewBox="0 0 360 160" width="360" height="160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Restrained bi-directional communication diagram: Client A connected to Server, Server connected to Client B">
+                      <!-- Client A -->
+                      <g transform="translate(15, 55)">
+                        <rect x="0" y="0" width="85" height="42" fill="#EDE8DE" stroke="#24231F" stroke-width="1.2" />
+                        <text x="42.5" y="24" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="600" fill="#24231F" letter-spacing="0.5">CLIENT A</text>
+                      </g>
+
+                      <!-- Duplex Link 1 (Client A <-> Server) -->
+                      <line x1="102" y1="71" x2="136" y2="71" stroke="#24231F" stroke-width="1.2" />
+                      <line x1="102" y1="81" x2="136" y2="81" stroke="#C4432D" stroke-width="1.2" />
+                      <polygon points="102,71 108,68 108,74" fill="#24231F" />
+                      <polygon points="136,81 130,78 130,84" fill="#C4432D" />
+
+                      <!-- Server -->
+                      <g transform="translate(138, 48)">
+                        <rect x="0" y="0" width="84" height="56" fill="#EDE8DE" stroke="#24231F" stroke-width="1.2" />
+                        <text x="42" y="28" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9.5" font-weight="600" fill="#24231F" letter-spacing="1">SERVER</text>
+                        <text x="42" y="42" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6.5" fill="#716D64">DISPATCHER</text>
+                      </g>
+
+                      <!-- Duplex Link 2 (Server <-> Client B) -->
+                      <line x1="224" y1="71" x2="258" y2="71" stroke="#24231F" stroke-width="1.2" />
+                      <line x1="224" y1="81" x2="258" y2="81" stroke="#C4432D" stroke-width="1.2" />
+                      <polygon points="258,71 252,68 252,74" fill="#24231F" />
+                      <polygon points="224,81 230,78 230,84" fill="#C4432D" />
+
+                      <!-- Client B -->
+                      <g transform="translate(260, 55)">
+                        <rect x="0" y="0" width="85" height="42" fill="#EDE8DE" stroke="#24231F" stroke-width="1.2" />
+                        <text x="42.5" y="24" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="600" fill="#24231F" letter-spacing="0.5">CLIENT B</text>
+                      </g>
+
+                      <!-- Footnote -->
+                      <text x="180" y="135" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#716D64" letter-spacing="0.5">FULL-DUPLEX WEBSOCKET SESSIONS</text>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- =========================================================
+               PROJECT 04: DOCUMENT SUMMARY ASSISTANT (AI / App Eng)
+               ========================================================= -->
+          <article class="project-row" aria-labelledby="p4-title">
+            <div class="project-grid-compact">
+              
+              <!-- Left: Description -->
+              <div class="project-info-col">
+                <div class="project-header-meta">
+                  <span class="project-number">04</span>
+                  <span class="project-category">AI / APPLICATION ENGINEERING</span>
+                </div>
+
+                <h3 id="p4-title" class="project-title-secondary">Document Summary Assistant</h3>
+
+                <p class="project-description">
+                  A document processing application implementing structured text
+                  extraction, client-side OCR fallback, token-aware chunking, and AI synthesis.
+                </p>
+
+                <p class="project-details-text">
+                  Processes documents through a multi-tier pipeline: PDF stream parsing via PDF.js,
+                  browser-offloaded OCR fallback via Tesseract.js when text density falls below
+                  thresholds, hierarchical sentence chunking with token constraints, and provider
+                  abstractions accommodating models from NVIDIA NIM, Google Gemini, and Groq.
+                </p>
+
+                <ul class="tech-tags" aria-label="Technologies used">
+                  <li class="tech-tag">Next.js</li>
+                  <li class="tech-tag">TypeScript</li>
+                  <li class="tech-tag">PDF.js</li>
+                  <li class="tech-tag">Tesseract.js</li>
+                  <li class="tech-tag">Token Chunking</li>
+                  <li class="tech-tag">Provider Abstraction</li>
+                </ul>
+
+                <div>
+                  <a href="https://github.com/ashlesh-l-g/document-summary-assistant" class="project-link" target="_blank" rel="noopener noreferrer">
+                    VIEW REPOSITORY &nearr;
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right: Technical Specification Panel -->
+              <div class="project-schematic-col">
+                <div class="project-plate-light">
+                  <div class="schematic-meta">
+                    <span>SPECIFICATION 4.1</span>
+                    <span>PIPELINE SEQUENCE</span>
+                  </div>
+
+                  <div class="schematic-content">
+                    <svg viewBox="0 0 320 180" width="320" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline sequence diagram: Input -> PDF/OCR Extraction -> Token Chunker -> AI Provider Adapter">
+                      <g transform="translate(15, 20)">
+                        <rect x="0" y="0" width="85" height="30" fill="#EDE8DE" stroke="#24231F" stroke-width="1.2" />
+                        <text x="42.5" y="19" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8" font-weight="600" fill="#24231F">01 / INPUT</text>
+                      </g>
+                      
+                      <line x1="100" y1="35" x2="135" y2="35" stroke="#24231F" stroke-width="1.2" />
+                      <polygon points="135,35 129,32 129,38" fill="#24231F" />
+
+                      <g transform="translate(135, 20)">
+                        <rect x="0" y="0" width="165" height="30" fill="#EDE8DE" stroke="#24231F" stroke-width="1.2" />
+                        <text x="82.5" y="19" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8" font-weight="600" fill="#24231F">02 / PDF.JS &amp; OCR FALLBACK</text>
+                      </g>
+
+                      <path d="M 217 50 L 217 80 L 100 80 L 100 110" fill="none" stroke="#24231F" stroke-width="1.2" />
+                      <polygon points="100,114 96,106 104,106" fill="#24231F" />
+
+                      <g transform="translate(20, 114)">
+                        <rect x="0" y="0" width="160" height="30" fill="#EDE8DE" stroke="#24231F" stroke-width="1.2" />
+                        <text x="80" y="19" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8" font-weight="600" fill="#24231F">03 / TOKEN CHUNKING</text>
+                      </g>
+
+                      <line x1="180" y1="129" x2="215" y2="129" stroke="#24231F" stroke-width="1.2" />
+                      <polygon points="215,129 209,126 209,132" fill="#24231F" />
+
+                      <g transform="translate(215, 114)">
+                        <rect x="0" y="0" width="90" height="30" fill="#EDE8DE" stroke="#C4432D" stroke-width="1.2" />
+                        <text x="45" y="19" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7.5" font-weight="600" fill="#C4432D">04 / AI SYNTHESIS</text>
+                      </g>
+
+                      <text x="160" y="168" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#716D64">IN-MEMORY STREAM PROCESSING</text>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-rule" />
+
+    <!-- =========================================
+         4. CURRENT INVESTIGATIONS
+         ========================================= -->
+    <section id="notes" class="site-section investigations-section" aria-labelledby="notes-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">02 / IN PROGRESS</span>
+          <h2 id="notes-title" class="section-title">Questions I&rsquo;m working through.</h2>
+          <p class="section-intro">
+            Areas of deliberate exploration, focusing on underlying systems
+            mechanisms and concurrent execution models.
           </p>
         </div>
 
-        <!-- Project 3 -->
-        <div class="bg-white shadow p-6 rounded-lg">
-          <h4 class="text-xl font-bold">Study App – Community + Post System</h4>
-          <p class="mt-3 text-gray-700">
-            A modular TypeScript backend using Express & Prisma, implementing Reddit-style communities, 
-            posts, likes, and search. Built with clean handler-based architecture.
-          </p>
+        <div class="investigations-grid">
+
+          <!-- Entry 01 -->
+          <article class="investigation-entry">
+            <div class="investigation-meta">
+              <span class="investigation-index">01</span>
+              <span class="investigation-topic">GO &amp; CONCURRENCY</span>
+            </div>
+            <h3 class="investigation-question">
+              How do you design concurrent software without losing control of its execution?
+            </h3>
+            <p class="investigation-context">
+              Exploring Go and the programming models used to build reliable systems software.
+            </p>
+          </article>
+
+          <!-- Entry 02 -->
+          <article class="investigation-entry">
+            <div class="investigation-meta">
+              <span class="investigation-index">02</span>
+              <span class="investigation-topic">LINUX &amp; PROCESSES</span>
+            </div>
+            <h3 class="investigation-question">
+              What actually happens between creating a process and supervising its lifecycle?
+            </h3>
+            <p class="investigation-context">
+              Building a deeper understanding of process management, signals, and operating-system interfaces.
+            </p>
+          </article>
+
+          <!-- Entry 03 -->
+          <article class="investigation-entry">
+            <div class="investigation-meta">
+              <span class="investigation-index">03</span>
+              <span class="investigation-topic">CONTAINER RUNTIMES</span>
+            </div>
+            <h3 class="investigation-question">
+              Which operating-system primitives make process isolation possible?
+            </h3>
+            <p class="investigation-context">
+              Investigating the concepts behind container runtimes and the relationship between applications and the Linux kernel.
+            </p>
+          </article>
+
         </div>
 
-        <!-- Project 4 -->
-        <div class="bg-white shadow p-6 rounded-lg">
-          <h4 class="text-xl font-bold">Fuzzy Temperature Control Simulation (Mamdani FIS)</h4>
-          <p class="mt-3 text-gray-700">
-            A Python simulation engine using fuzzy sets, rule base, defuzzification, 
-            and a GUI interface for controlling AC temperature based on multiple inputs.
-          </p>
+      </div>
+    </section>
+
+    <hr class="section-rule" />
+
+    <!-- =========================================
+         5. ENGINEERING PROFILE / EXPERIENCE
+         ========================================= -->
+    <section id="about" class="site-section profile-section" aria-labelledby="profile-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">03 / PROFILE</span>
+          <h2 id="profile-title" class="section-title">More interested in the machinery.</h2>
+        </div>
+
+        <div class="profile-layout">
+          
+          <div class="profile-copy">
+            <p>
+              I&rsquo;m a Computer Science student at Vellore Institute of Technology,
+              Andhra Pradesh, interested in backend engineering and systems
+              programming.
+            </p>
+            <p>
+              I enjoy working through the parts of software that are easy to
+              take for granted: request lifecycles, database behavior, process
+              management, communication between components, and the trade-offs
+              behind architectural decisions.
+            </p>
+            <p>
+              My work spans application backends and lower-level systems
+              experiments. I&rsquo;m continuing to deepen my understanding of Go,
+              Linux, and infrastructure software.
+            </p>
+          </div>
+
+          <aside class="profile-sidebar" aria-label="Profile Details">
+            <div class="profile-card">
+              <span class="profile-card-title">ACADEMIC &amp; TECHNICAL CONTEXT</span>
+              <ul class="profile-detail-list">
+                <li class="profile-detail-item">
+                  <span class="profile-detail-label">INSTITUTION</span>
+                  <span class="profile-detail-val">Vellore Institute of Technology, AP</span>
+                </li>
+                <li class="profile-detail-item">
+                  <span class="profile-detail-label">DISCIPLINE</span>
+                  <span class="profile-detail-val">Computer Science &amp; Engineering</span>
+                </li>
+                <li class="profile-detail-item">
+                  <span class="profile-detail-label">PRIMARY INTERESTS</span>
+                  <span class="profile-detail-val">Backend Architecture &bull; Systems Internals</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-rule" />
+
+    <!-- =========================================
+         6. TECHNICAL TOOLKIT
+         ========================================= -->
+    <section class="site-section toolkit-section" aria-labelledby="toolkit-title">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">04 / TOOLKIT</span>
+          <h2 id="toolkit-title" class="section-title">Tools I work with.</h2>
+        </div>
+
+        <div class="toolkit-grid">
+
+          <!-- Group 1: BACKEND -->
+          <div class="toolkit-column">
+            <h3 class="toolkit-col-title">BACKEND</h3>
+            <ul class="toolkit-items">
+              <li class="toolkit-item">TypeScript</li>
+              <li class="toolkit-item">Node.js</li>
+              <li class="toolkit-item">Express</li>
+              <li class="toolkit-item">REST APIs</li>
+            </ul>
+          </div>
+
+          <!-- Group 2: DATA -->
+          <div class="toolkit-column">
+            <h3 class="toolkit-col-title">DATA</h3>
+            <ul class="toolkit-items">
+              <li class="toolkit-item">PostgreSQL</li>
+              <li class="toolkit-item">Prisma</li>
+              <li class="toolkit-item">Redis</li>
+            </ul>
+          </div>
+
+          <!-- Group 3: SYSTEMS -->
+          <div class="toolkit-column">
+            <h3 class="toolkit-col-title">SYSTEMS</h3>
+            <ul class="toolkit-items">
+              <li class="toolkit-item">C</li>
+              <li class="toolkit-item">
+                <span>Go</span>
+                <span class="toolkit-note">(Developing)</span>
+              </li>
+              <li class="toolkit-item">Linux</li>
+              <li class="toolkit-item">Process management</li>
+              <li class="toolkit-item">IPC</li>
+            </ul>
+          </div>
+
+          <!-- Group 4: INFRASTRUCTURE & INTERFACES -->
+          <div class="toolkit-column">
+            <h3 class="toolkit-col-title">INFRASTRUCTURE &amp; INTERFACES</h3>
+            <ul class="toolkit-items">
+              <li class="toolkit-item">Docker</li>
+              <li class="toolkit-item">Networking fundamentals</li>
+              <li class="toolkit-item">React</li>
+              <li class="toolkit-item">WebSockets</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-rule" />
+
+    <!-- =========================================
+         7. CONTACT
+         ========================================= -->
+    <section id="contact" class="site-section contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        
+        <div class="contact-layout">
+          
+          <div class="contact-info">
+            <span class="section-label">05 / CONTACT</span>
+            <h2 id="contact-title" class="contact-headline">
+              Have something interesting to build?
+            </h2>
+            <p class="contact-copy">
+              I&rsquo;m interested in backend engineering, infrastructure, and
+              projects that involve understanding systems a little more deeply.
+            </p>
+          </div>
+
+          <ul class="contact-links-list" aria-label="Direct contact channels">
+            <li class="contact-link-item">
+              <span class="contact-link-label">EMAIL</span>
+              <a href="mailto:a71004224@gmail.com" class="contact-link-value">a71004224@gmail.com</a>
+            </li>
+
+            <li class="contact-link-item">
+              <span class="contact-link-label">GITHUB</span>
+              <a href="https://github.com/ashlesh-l-g" class="contact-link-value" target="_blank" rel="noopener noreferrer">github.com/ashlesh-l-g &nearr;</a>
+            </li>
+
+            <li class="contact-link-item">
+              <span class="contact-link-label">LINKEDIN</span>
+              <a href="https://www.linkedin.com/in/ashlesh-l-gujjar" class="contact-link-value" target="_blank" rel="noopener noreferrer">linkedin.com/in/ashlesh-l-gujjar &nearr;</a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================
+       8. FOOTER
+       ========================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        
+        <div class="footer-brand">
+          <span class="footer-name">ASHLESH L.G.</span>
+          <span class="footer-descriptor">BACKEND / SYSTEMS</span>
+        </div>
+
+        <ul class="footer-links" aria-label="Footer Navigation">
+          <li>
+            <a href="https://github.com/ashlesh-l-g" target="_blank" rel="noopener noreferrer">GITHUB &nearr;</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/ashlesh-l-gujjar" target="_blank" rel="noopener noreferrer">LINKEDIN &nearr;</a>
+          </li>
+        </ul>
+
+        <div class="footer-year">
+          &copy; <span id="current-year">2026</span> Ashlesh L.G.
         </div>
 
       </div>
     </div>
-  </section>
-
-  <!-- EXPERIENCE / LEARNING JOURNEY -->
-  <section id="experience" class="bg-white py-20">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-10">Experience & Learning Journey</h3>
-
-      <div class="space-y-6 text-gray-700">
-        <p>
-          I follow a deliberate, deep–foundational learning path.  
-          My focus areas include backend engineering, database systems, computer architecture, 
-          distributed systems, WebRTC, and systems-level C programming.
-        </p>
-
-        <p>
-          Over the last year, I have also developed structured notes and solved advanced university-level 
-          questions in neural networks, fuzzy logic, simulated annealing, and relational algebra.
-        </p>
-
-        <p>
-          In addition to backend work, I explore DevOps fundamentals, performance, and debugging.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-20">
-    <div class="max-w-6xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
-      <p class="text-gray-700 mb-6">
-        Feel free to reach out for collaborations, backend projects, or systems programming discussions.
-      </p>
-
-      <div class="space-y-2 text-lg">
-        <p>Email: <a class="text-blue-600" href="mailto:a71004224@gmail.com">a71004224@gmail.com</a></p>
-        <p>GitHub: <a class="text-blue-600" href="https://github.com/ashlesh-l-g">github.com/ashlesh-l-g</a></p>
-        <p>LinkedIn: <a class="text-blue-600" href="https://www.linkedin.com/in/ashlesh-l-gujjar">linkedin.com/in/ashlesh-l-gujjar</a></p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="py-6 bg-gray-900 text-center text-white">
-    © 2025 Ashlesh L.G — All Rights Reserved
   </footer>
 
+  <!-- Minimal JavaScript -->
+  <script src="main.js" defer></script>
 </body>
 </html>
